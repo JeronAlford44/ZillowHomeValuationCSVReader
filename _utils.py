@@ -47,6 +47,7 @@ def get_data_by_zipcode(num_bedrooms:str,zipcode: str):
                     if lines.get('RegionName') == zipcode.title():
                         valueFound = True
                         try:
+                            print(lines.keys())
                             res = float(lines.get('2023-10-31'))
                             city = lines.get('City')
                             state = lines.get('State')
@@ -61,3 +62,4 @@ def get_data_by_zipcode(num_bedrooms:str,zipcode: str):
                     # else:
                     #     # You may not need this else block, depending on your requirements
                     #     print(lines.get('RegionName'))
+print(get_data_by_zipcode('2','95691'))
