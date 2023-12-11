@@ -62,6 +62,7 @@ class Data_Storage():
                     if year not in seen_years:
                         seen_years.add(year)
                         filtered_data[date_str] = value
+                    
                 except ValueError:
                     # Ignore keys that are not valid dates
                     pass
